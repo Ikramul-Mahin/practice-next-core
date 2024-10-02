@@ -1,5 +1,6 @@
 import React from 'react';
 import { getPosts } from '../services/apiPosts';
+import Link from 'next/link';
 
 
 const Postpage = async () => {
@@ -12,8 +13,11 @@ const Postpage = async () => {
 				{
 					postsData?.slice(0,20).map(({title, body,id})=>(
 					<div className='border-2 p-4 m-4' key={postsData.id}>
-<h1>Title:{title}</h1>
+			<h1>Title:{title}</h1>
 <h2>Body:{body}</h2>
+<button className='btn bg-red-900 p-4'>
+	<Link href={`/posts/${id}`}>See Details</Link>
+</button>
 					</div>
 					))
 				}
