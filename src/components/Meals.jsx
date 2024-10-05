@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from 'react';
 
 const Meals = () => {
-	const [search,setSearch]  =useState('a')
+	const [search,setSearch]  =useState('')
 	const [error,setError] = useState("")
 	const [meals,setMeals] = useState([])
 	const loadData= async() =>{
 	try {
-		const res = await fetch(`www.themealdb.com/api/json/v1/1/search.php?f=${search}`)
+	const res = await fetch(`www.themealdb.com/api/json/v1/1/search.php?f=${search}`)
 	const data= res.json()
 	console.log(data);
 	setMeals(data.meals)
