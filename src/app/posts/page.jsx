@@ -1,6 +1,7 @@
 import React from 'react';
 import { getPosts } from '../services/apiPosts';
 import Link from 'next/link';
+import styles from './styles.modules.css'
 
 
 const Postpage = async () => {
@@ -16,7 +17,7 @@ const Postpage = async () => {
 			<h1>Title:{title}</h1>
 <h2>Body:{body}</h2>
 <button className='btn bg-red-900 p-4'>
-	<Link href={`/posts/${id}`}>See Details</Link>
+	<Link className={styles.test_text} href={`/posts/${id}`}>See Details</Link>
 </button>
 					</div>
 					))
