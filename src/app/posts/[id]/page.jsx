@@ -1,3 +1,4 @@
+import { redirect } from 'next/dist/server/api-utils';
 import React from 'react';
 
 
@@ -5,6 +6,7 @@ import React from 'react';
 const getDetailPaeg = async(id) =>{
 const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
 const data =await res.json()
+
 return data
 }
 export const generateMetadata= async({params})=>{

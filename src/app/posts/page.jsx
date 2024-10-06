@@ -2,8 +2,7 @@ import React from 'react';
 import { getPosts } from '../services/apiPosts';
 import Link from 'next/link';
 import styles from './styles.modules.css'
-import {Roboto_Mono } from 'next/font/google'
-const robotmon = Roboto_Mono({weight:[400],subsets:['latin']})
+
 export const metadata = {
 	title: {
 	 absolute: "post page",
@@ -16,7 +15,7 @@ const Postpage = async () => {
 	const postsData=  await getPosts()
 	
 	return (
-		<div className={robotmon}>
+		<div>
 			post page
 			<div className='grid grid-cols-4'>
 				{
