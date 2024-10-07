@@ -6,10 +6,10 @@ const getTime= async()=>{
 	return data.currentTime
 }
 const page = () => {
-	const currentTime =  getTime()
+	// const currentTime =  getTime()
 	return (
 		<div className='min-h-screen'>
-			<h1 className='font-bold'>Galary Page {currentTime}</h1>
+			<h1 className='font-bold'>Galary Page</h1>
 			<Image
 			 height='1080'
 			 width="1920"
