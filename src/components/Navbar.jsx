@@ -29,8 +29,11 @@ const Navbar = () => {
 	}
  </ul>
 
- {session?<button  className='border p-2'>Log In</button>:
- <button className='border p-2'>log out</button>}
+ <button  className='border p-2'>Log In</button>
+ {/* <button className='border p-2'>log out</button> */}
+ <Link href={'/api/auth/signup'}>
+ <button  className='border p-2'>Sign Up</button>
+ </Link>
 		</div>
 	);
 };
